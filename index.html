@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+ body{
+    background-color: #63B4D1;
+    text-align: center;
+ }
+   .container{
+    height: 70vmin;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   }
+   .game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1vmin;
+   }
+   .box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    font-size: 8vmin;
+    background-color: #ffffcf;
+    color: #b0413e;
+   }
+  #reset-btn{
+    width: 250px;
+    height: 50px;
+    border-radius: 40px;
+    border:none;
+    background-color: #3E0F9B;
+  
+    font-size: 4vmin;
+    font-weight: 600;
+    color: wheat;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+  h1{
+    font-size: 1.5rem;
+    display: block;
+    margin: 10px 0px;
+  }
+  #reset-btn{
+    transform: scale(90%);
+  }
+  #new-btn{
+    width: 250px;
+    height: 50px;
+    border-radius: 40px;
+    border:none;
+    background-color: #3E0F9B;
+    
+    font-size: 4vmin;
+    font-weight: 600;
+    color: wheat;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+  #new-btn:hover{
+    transform: scale(90%);
+  }
+  .msg-container{
+    height: 100vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    overflow-y: hidden;
+  }
+  p{
+    color:  #333;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-bottom: 2px solid #333;
+    
+  }
+  .hide{
+    display: none;
+  }
+</style>
+
+<body>
+    <div class="msg-container hide">
+        <p id="msg">winner</p>
+        <button id="new-btn">new game</button>
+    </div>
+    <main>
+        <h1>Tic Toe Game</h1>
+        <div class="container">
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+
+
+        </div>
+        <button id="reset-btn">Reset game</button>
+    </main>
+
+
+
+
+    <script src="node.js"></script>
+</body>
+
+</html>
